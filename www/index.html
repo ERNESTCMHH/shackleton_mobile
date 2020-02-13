@@ -12,6 +12,7 @@
     <script src="https://unpkg.com/onsenui/js/onsenui.min.js">
     </script>
 </head>
+
 <body>
   <ons-page>
  <div style="text-align: center; margin-top: 200px">
@@ -19,6 +20,7 @@
  <ons-input id="username" placeholder="Username" modifier="underbar">
  </ons-input>
  </p>
+
  <p>
  <ons-input
  id="password"
@@ -26,9 +28,27 @@
  type="password"
  modifier="underbar">
  </ons-input>
+<script>
+ function login()
+{
+
+  my_elem = document.getElementById('ans');
+  if (username==="user" && password==="pass")
+{
+  ons.notification.alert ('successful')
+}
+else
+{
+  ons.notification.alert ('incorrect credentials')
+}
+
+}
+</script>
+
  </p>
  <p>
- <ons-button>Sign in</ons-button>
+  <span id="ans"></span>
+ <ons-button onClick='login()'>Sign in</ons-button>
  </p>
  </div>
 </ons-page>
