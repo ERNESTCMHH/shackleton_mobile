@@ -15,7 +15,7 @@
 
 <body>
 <ons-navigator id="navigator">
- <ons-page id = "Login">
+ <ons-page id = "login.html">
     <script>
       function login()
       {
@@ -23,8 +23,7 @@
      password = document.getElementById('password').value;
         if (username== "user" && password== "pass")
         {
-          ons.notification.toast ('Login Successful!', {timeout: 2000}); var navigator = document.getElementById('navigator');
-navigator.resetToPage('shackleton.html');
+          ons.notification.toast ('Login Successful!', {timeout: 2000}); var navigator = document.getElementById('navigator'); navigator.resetToPage('shackleton.html');
         }
         else
         {
@@ -44,6 +43,12 @@ navigator.resetToPage('shackleton.html');
 
 <ons-template id="shackleton.html">
   <ons-page id="shackleton">
+    
+    <ons-toolbar id="home-toolbar">
+<div class="left">Home</div>
+<div class="center" onClick = "quiz()">Quiz</div>
+
+</ons-toolbar>
 
     <h1> Ernest Shackleton </h1>
    <img src="images/shackletonicon.jpg" alt=“Ernest Shackleton at Dulwich College"/> 
@@ -56,6 +61,10 @@ navigator.resetToPage('shackleton.html');
 
   </ons-page>
 </ons-template>
+
+ <ons-template id="quiz.html">
+ <div id="quiz">
+   
 
 </body>
 </html>
